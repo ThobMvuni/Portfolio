@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header img {
+    width: 90px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff00ff;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #00ffff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 50%;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+#home img {
+    width: 100%;
+    height: auto;
+}
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    background: #121212;
+}
+
+#about h1 {
+    color: #00ffff;
+    font-size: 2.5rem;
+}
+
+#about p {
+    max-width: 50%;
+}
+
+#about img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #00ffff;
+}
+
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+footer img {
+    width: 25px;
+    margin: 5px;
+    transition: transform 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        width: 120px;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none; 
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about img {
+        width: 100px;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
